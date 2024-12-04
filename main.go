@@ -23,6 +23,8 @@ func main() {
 
 	for _, year := range []int{currentYear - 1, currentYear, currentYear + 1} {
 		calendar.AddMovableFeast(year)
+		calendar.AddDaylightSavingStart(year)
+		calendar.AddDaylightSavingEnd(year)
 	}
 
 	ical := calendar.ICal()
