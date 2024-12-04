@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fixedHolidays, error := LoadEventsFromJson("fixed-holidays.json")
+	fixedHolidays, error := LoadEventsFromJson("fixed_holidays.json")
 
 	if error != nil {
 		log.Fatal(error)
