@@ -1,0 +1,172 @@
+[
+	{
+		"summary": "Nowy Rok",
+		"description": "Dzień wolny od pracy.",
+		"month": 1,
+		"day": 1
+	},
+
+	{
+		"summary": "Trzech Króli (Objawienie Pańskie)",
+		"description": "Dzień wolny od pracy.",
+		"month": 1,
+		"day": 6
+	},
+
+	{
+		"summary": "Dzień Babci",
+		"month": 1,
+		"day": 21
+	},
+
+	{
+		"summary": "Dzień Dziadka",
+		"month": 1,
+		"day": 22
+	},
+
+	{
+		"summary": "Walentynki",
+		"month": 2,
+		"day": 14
+	},
+
+	{
+		"summary": "Dzień Kobiet",
+		"month": 3,
+		"day": 8
+	},
+
+	{
+		"summary": "Dzień Mężczyzn",
+		"month": 3,
+		"day": 10
+	},
+
+	{
+		"summary": "Prima Aprilis",
+		"month": 4,
+		"day": 1
+	},
+
+	{
+		"summary": "Święto Pracy",
+		"description": "Dzień wolny od pracy.",
+		"month": 5,
+		"day": 1
+	},
+
+	{
+		"summary": "Dzień Flagi Rzeczypospolitej Polskiej",
+		"month": 5,
+		"day": 2
+	},
+
+	{
+		"summary": "Święto Konstytucji 3 Maja",
+		"description": "Dzień wolny od pracy.",
+		"month": 5,
+		"day": 3
+	},
+
+	{
+		"summary": "Dzień Matki",
+		"month": 5,
+		"day": 26
+	},
+
+	{
+		"summary": "Dzień Dziecka",
+		"month": 6,
+		"day": 1
+	},
+
+	{
+		"summary": "Dzień Ojca",
+		"month": 6,
+		"day": 23
+	},
+
+	{
+		"summary": "Wniebowzięcie Najświętszej Maryi Panny",
+		"description": "Dzień wolny od pracy.",
+		"month": 8,
+		"day": 15
+	},
+
+	{
+		"summary": "Dzień Chłopaka",
+		"month": 9,
+		"day": 30
+	},
+
+	{
+		"summary": "Dzień Nauczyciela (Dzień Edukacji Narodowej)",
+		"month": 10,
+		"day": 14
+	},
+
+	{
+		"summary": "Wszystkich Świętych",
+		"description": "Dzień wolny od pracy.",
+		"month": 11,
+		"day": 1
+	},
+
+	{
+		"summary": "Dzień Zaduszny",
+		"month": 11,
+		"day": 2
+	},
+
+	{
+		"summary": "Narodowe Święto Niepodległości",
+		"description": "Dzień wolny od pracy.",
+		"month": 11,
+		"day": 11
+	},
+
+	{
+		"summary": "Andrzejki",
+		"month": 11,
+		"day": 29
+	},
+
+	{
+		"summary": "Barbórka",
+		"month": 12,
+		"day": 4
+	},
+
+	{
+		"summary": "Dzień św. Mikołaja",
+		"month": 12,
+		"day": 6
+	},
+
+	{
+		"summary": "Wigilia Bożego Narodzenia",
+		"month": 12,
+		"day": 24
+	},
+
+	{
+		"summary": "Boże Narodzenie",
+		"description": "Dzień wolny od pracy.",
+		"month": 12,
+		"day": 25
+	},
+
+	{
+		"summary": "Dzień Świętego Szczepana",
+		"description": "Dzień wolny od pracy.",
+		"month": 12,
+		"day": 26
+	},
+
+	{
+		"summary": "Sylwester",
+		"month": 12,
+		"day": 31
+	}
+]
