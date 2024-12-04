@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -18,6 +19,14 @@ func main() {
 		Events: fixedHolidays,
 	}
 
+	currentYear := time.Now().Year()
+
+	for _, year := range []int{currentYear - 1, currentYear, currentYear + 1} {
+		calendar.AddMovableFeast(year)
+	}
+
+	ical := calendar.ICal()
+
 	http.HandleFunc("/", func(response http.ResponseWriter, request *http.Request) {
 		if request.URL.Path != "/" {
 			response.WriteHeader(http.StatusNotFound)
@@ -30,7 +39,6 @@ func main() {
 		response.Header().Set("Content-Type", "text/calendar; charset=UTF-8")
 		response.Header().Set("Content-Disposition", "inline; filename=holidays.ics")
 		response.WriteHeader(http.StatusOK)
-		ical := calendar.ICal()
 		response.Write([]byte(ical))
 	})
 
