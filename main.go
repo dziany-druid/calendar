@@ -4,10 +4,11 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
-	fixedHolidays, error := LoadEventsFromJson("fixed-holidays.json")
+	fixedHolidays, error := LoadEventsFromJson("fixed_holidays.json")
 
 	if error != nil {
 		log.Fatal(error)
@@ -17,6 +18,16 @@ func main() {
 		Name: "Polskie święta",
 		Events: fixedHolidays,
 	}
+
+	currentYear := time.Now().Year()
+
+	for _, year := range []int{currentYear - 1, currentYear, currentYear + 1} {
+		calendar.AddMovableFeast(year)
+		calendar.AddDaylightSavingStart(year)
+		calendar.AddDaylightSavingEnd(year)
+	}
+
+	ical := calendar.ICal()
 
 	http.HandleFunc("/", func(response http.ResponseWriter, request *http.Request) {
 		if request.URL.Path != "/" {
@@ -30,7 +41,6 @@ func main() {
 		response.Header().Set("Content-Type", "text/calendar; charset=UTF-8")
 		response.Header().Set("Content-Disposition", "inline; filename=holidays.ics")
 		response.WriteHeader(http.StatusOK)
-		ical := calendar.ICal()
 		response.Write([]byte(ical))
 	})
 

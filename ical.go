@@ -7,13 +7,6 @@ import (
 	"crypto/md5"
 )
 
-func generateUid(event Event) string {
-	input := fmt.Sprintf("%s%d%d%d", event.Year, event.Summary, event.Month, event.Day)
-	hash := fmt.Sprintf("%x", md5.Sum([]byte(input)))
-
-	return hash
-}
-
 func (calendar *Calendar) ICal() string {
 	var content strings.Builder
 
@@ -52,4 +45,11 @@ func (calendar *Calendar) ICal() string {
 	content.WriteString("END:VCALENDAR\n")
 
 	return content.String()
+}
+
+func generateUid(event Event) string {
+	input := fmt.Sprintf("%s%d%d%d", event.Year, event.Summary, event.Month, event.Day)
+	hash := fmt.Sprintf("%x", md5.Sum([]byte(input)))
+
+	return hash
 }
